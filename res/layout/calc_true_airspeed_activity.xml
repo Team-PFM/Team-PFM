@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="*"
+    >
+    
+    
+    <TableRow android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/indicated_airspeed_string"
+            android:textSize="18dp" android:layout_width="140dp"/>
+
+       
+        <TableRow>
+
+            <Spinner
+                android:id="@+id/indicated_airspeed_unit_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"/>
+
+        	<EditText
+            	android:id="@+id/input_indicated_airspeed"
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:ems="3"
+            	android:inputType="numberDecimal" >
+            	<requestFocus />
+        	</EditText>
+           
+        </TableRow>
+
+    </TableRow>
+    
+    <TableRow 
+        android:paddingBottom="50dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/mean_sea_level_altitude_string"
+            android:textSize="18dp" android:layout_width="140dp"/>
+
+        <EditText
+            android:id="@+id/input_mean_sea_level_altitude"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+
+    <Button
+        android:id="@+id/calculate_true_airspeed_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp" android:text="@string/calculate_string"/>
+    
+    <TableRow android:paddingTop="50dp">
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/true_airspeed_string"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/output_true_airspeed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+    
+
+</TableLayout>

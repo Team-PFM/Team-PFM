@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="*"
+    >
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/true_airspeed_string"
+            android:textSize="18dp" />
+
+       
+        <TableRow>
+
+            <Spinner
+                android:id="@+id/true_airspeed_unit_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"/>
+
+        	<EditText
+            	android:id="@+id/input_true_airspeed"
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:ems="3"
+            	android:inputType="numberDecimal" >
+            	<requestFocus />
+        	</EditText>
+           
+        </TableRow>
+
+    </TableRow>
+    
+    
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/wind_speed_string"
+            android:textSize="18dp" />
+
+       
+        <TableRow>
+
+            <Spinner
+                android:id="@+id/wind_speed_unit_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"/>
+
+        	<EditText
+            	android:id="@+id/input_wind_speed"
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:ems="3"
+            	android:inputType="numberDecimal" >
+            	<requestFocus />
+        	</EditText>
+           
+        </TableRow>
+
+    </TableRow>
+    
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/wind_direction_string"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/input_wind_direction"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+    
+    <TableRow android:paddingBottom="30dp">
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/course_string"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/input_course"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+
+    <Button
+        android:id="@+id/calculate_heading_gspeed_wcangle_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp" android:text="@string/calculate_string"/>
+    
+    <TableRow android:paddingTop="30dp">
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/heading_string"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/output_heading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+    
+    
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/ground_speed_string"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/output_ground_speed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+    
+    
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/wind_correction_angle_string"
+            android:textSize="18dp" android:layout_width="140dp"/>
+
+        <EditText
+            android:id="@+id/output_wind_correction_angle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+
+</TableLayout>

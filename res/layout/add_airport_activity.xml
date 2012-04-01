@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="*"
+    >
+
+    <TableRow android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:textSize="18dp" 
+            android:text="@string/airport_id_string"/>
+
+        <EditText
+            android:id="@+id/input_airport_ID"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+
+    
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/latitude_string"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/input_latitude"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+    
+    
+    <TableRow android:paddingBottom="50dp">
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/longitude_string"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/input_longitude"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+
+    <Button
+        android:id="@+id/add_airport_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp" android:text="@string/add_airport_string"/>
+
+
+</TableLayout>

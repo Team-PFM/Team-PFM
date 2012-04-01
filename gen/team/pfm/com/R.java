@@ -13,11 +13,73 @@ public final class R {
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
     }
+    public static final class id {
+        public static final int add_airport_button=0x7f050004;
+        public static final int calculate_heading_gspeed_wcangle_button=0x7f05000b;
+        public static final int calculate_runway_winds_button=0x7f050010;
+        public static final int calculate_true_airspeed_button=0x7f050016;
+        public static final int density_altitude_button=0x7f05001b;
+        public static final int distance_course_between_airports_button=0x7f05001d;
+        public static final int heading_gs_wca_button=0x7f050018;
+        public static final int indicated_airspeed_unit_spinner=0x7f050013;
+        public static final int input_airport_ID=0x7f050001;
+        public static final int input_course=0x7f05000a;
+        public static final int input_indicated_airspeed=0x7f050014;
+        public static final int input_latitude=0x7f050002;
+        public static final int input_longitude=0x7f050003;
+        public static final int input_mean_sea_level_altitude=0x7f050015;
+        public static final int input_runway_direction=0x7f05000f;
+        public static final int input_true_airspeed=0x7f050006;
+        public static final int input_wind_direction=0x7f050009;
+        public static final int input_wind_speed=0x7f050008;
+        public static final int output_about=0x7f050000;
+        public static final int output_crosswind=0x7f050011;
+        public static final int output_documents=0x7f05001e;
+        public static final int output_ground_speed=0x7f05000d;
+        public static final int output_heading=0x7f05000c;
+        public static final int output_headwind=0x7f050012;
+        public static final int output_true_airspeed=0x7f050017;
+        public static final int output_wind_correction_angle=0x7f05000e;
+        public static final int runway_winds_button=0x7f05001c;
+        public static final int true_airspeed_button=0x7f05001a;
+        public static final int true_airspeed_unit_spinner=0x7f050005;
+        public static final int wind_speed_unit_spinner=0x7f050007;
+        public static final int windspeed_winddirection_button=0x7f050019;
+    }
     public static final class layout {
-        public static final int main=0x7f030000;
+        public static final int about_activity=0x7f030000;
+        public static final int add_airport_activity=0x7f030001;
+        public static final int calc_heading_gspeed_wcangle_activity=0x7f030002;
+        public static final int calc_runway_winds_activity=0x7f030003;
+        public static final int calc_true_airspeed_activity=0x7f030004;
+        public static final int calculations_activity=0x7f030005;
+        public static final int documents_activity=0x7f030006;
+        public static final int main=0x7f030007;
     }
     public static final class string {
+        public static final int add_airport_string=0x7f04000b;
+        public static final int airport_id_string=0x7f040008;
         public static final int app_name=0x7f040001;
+        public static final int calculate_string=0x7f040007;
+        public static final int course_string=0x7f040012;
+        public static final int crosswind_string=0x7f040005;
+        public static final int density_altitude_string=0x7f04000e;
+        public static final int distance_course_between_airports_string=0x7f040011;
+        public static final int ground_speed_string=0x7f040014;
+        public static final int heading_gp_wca_string=0x7f04000c;
+        public static final int heading_string=0x7f040013;
+        public static final int headwind_string=0x7f040006;
         public static final int hello=0x7f040000;
+        public static final int indicated_airspeed_string=0x7f040016;
+        public static final int latitude_string=0x7f040009;
+        public static final int longitude_string=0x7f04000a;
+        public static final int mean_sea_level_altitude_string=0x7f040017;
+        public static final int runway_direction_string=0x7f040002;
+        public static final int runway_winds_string=0x7f040010;
+        public static final int true_airspeed_string=0x7f04000f;
+        public static final int wind_correction_angle_string=0x7f040015;
+        public static final int wind_direction_string=0x7f040003;
+        public static final int wind_speed_string=0x7f040004;
+        public static final int windspeed_winddirection_string=0x7f04000d;
     }
 }
