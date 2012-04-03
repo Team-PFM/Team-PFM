@@ -8,6 +8,6 @@ public class TeamPFMActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mainactivity);
+        setContentView(R.layout.mainpage);
     }
 }
