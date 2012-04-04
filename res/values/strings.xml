@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World, TeamPFMActivity!</string>
-    <string name="app_name">Team-PFM</string>
+    <string name="hello">Hello World, FunFunActivity!</string>
+    <string name="app_name">FunFun</string>
+    <string name="DefaultValue">0</string>
+    <string name="mainpageTitle">Title</string>
+    <string name="mainpageConversion">Conversions</string>
+    <string name="mainpageCalculations">Calculations</string>
+    <string name="mainpageAddDelete">Add/Delete</string>
+    <string name="mainpageDocuments">Documents</string>
+    <string name="adddeletepageAdd">Add</string>
+    <string name="adddeletepageDelete">Delete</string>
+    <string name="settingspageThemes">Themes</string>
+    <string name="settingspageAbout">About</string>
 
 </resources>
