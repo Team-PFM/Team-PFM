@@ -28,7 +28,7 @@ android:layout_gravity="center" android:layout_margin="15dp"/>
 		android:textStyle="bold"
 		android:textSize="25dp"
 android:layout_gravity="center" android:layout_margin="15dp"/>
-
+
     <Button
         android:id="@+id/mainPageAddDelete"
         android:layout_width="fill_parent"
@@ -36,6 +36,7 @@ android:layout_gravity="center" android:layout_margin="15dp"/>
         android:layout_margin="15dp"
         android:text="@string/mainpageAddDelete"
         android:textSize="25dp"
+        android:onClick="next"
         android:textStyle="bold" />
 
     <Button
