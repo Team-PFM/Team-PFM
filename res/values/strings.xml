@@ -13,5 +13,6 @@
     <string name="adddeletepageDelete">Delete</string>
     <string name="settingspageThemes">Themes</string>
     <string name="settingspageAbout">About</string>
+    <string name="settings">Settings</string>
 
 </resources>
