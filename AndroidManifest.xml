@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name="addAndDeleteActivity"></activity>
+        <activity android:name="SettingsActivity"></activity>
     </application>
 
 </manifest>
