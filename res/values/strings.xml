@@ -2,7 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, FunFunActivity!</string>
-    <string name="app_name">FunFun</string>
+    <string name="app_name">Team PFM's FPC'</string>
     <string name="DefaultValue">0</string>
     <string name="mainpageTitle">Title</string>
     <string name="mainpageConversion">Conversions</string>
