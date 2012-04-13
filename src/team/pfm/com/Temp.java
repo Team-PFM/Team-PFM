@@ -1,6 +1,7 @@
 package team.pfm.com;
 
 public class Temp {
+	//conversion class for temperature.
 	public double celToFah(double tem){
 		double fah = (5/9)*(tem - 32);
 		return fah;
