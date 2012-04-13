@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/flyingdistancecourseDepartingAirport"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/flyingdistancecourseDepartingAirport"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/flyingdistancecourseDepartingAirportSpinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+<TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:id="@+id/flyingdistancecourseDestinationAirport"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/flyingdistancecourseDestinationAirport"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <Spinner
+                android:id="@+id/flyingdistanceDestinationAirportSpinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+      <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:id="@+id/flyingdistancecourseDistanceUnit"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/flyingdistancecourseDistanceUnit"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <Spinner
+                android:id="@+id/flyingdistancecourseDistanceUnitSpinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+      
+
+        <Button
+            android:id="@+id/flyingdistancecourseCalculate"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.87"
+            android:text="@string/flyingdistancecourseCalculate" android:textStyle="bold" android:textSize="20dp" android:layout_gravity="center" android:layout_marginBottom="30dp" android:layout_marginTop="30dp"/>
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/flyingdistancecourseFlyingDistance"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/flyingdistancecourseFlyingDistance"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/flyingdistancecourseFlyingDistanceOutput"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/flyingdistancecourseFlyingDistanceOutput" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/flyingdistancecourseCourse"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/flyingdistancecourseCourse"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/flyingdistancecourseCourse"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/flyingdistancecourseCourseOutput" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+
+</LinearLayout>

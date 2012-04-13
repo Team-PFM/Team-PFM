@@ -4,14 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/mainPageTitle"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/mainpageTitle"
-		android:textStyle="bold"
-		android:textSize="25dp"
-android:layout_gravity="center" android:layout_margin="15dp"/>
+       <TextView
+                android:id="@+id/mainPageTitlet"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mainpageTitle"
+                android:textSize="25dp"
+                android:textStyle="bold" 
+                android:layout_margin="15dp" android:layout_gravity="center"/>/>
+   
     <Button
         android:id="@+id/mainPageConversions"
         android:layout_width="fill_parent"
@@ -28,7 +29,7 @@ android:layout_gravity="center" android:layout_margin="15dp"/>
 		android:textStyle="bold"
 		android:textSize="25dp"
 android:layout_gravity="center" android:layout_margin="15dp"/>
-
+
     <Button
         android:id="@+id/mainPageAddDelete"
         android:layout_width="fill_parent"
@@ -36,7 +37,6 @@ android:layout_gravity="center" android:layout_margin="15dp"/>
         android:layout_margin="15dp"
         android:text="@string/mainpageAddDelete"
         android:textSize="25dp"
-        android:onClick="next"
         android:textStyle="bold" />
 
     <Button
