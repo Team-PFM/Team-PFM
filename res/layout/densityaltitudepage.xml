@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" android:layout_marginTop="20dp" android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/densityaltitudepagePressureAltitude"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/densityaltitudepagePressureAltitude"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/densityaltitudePressureAltitudeInput"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="@string/densityaltitudepagePressureAltitudeInput" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+       
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" android:layout_marginBottom="30dp" android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/densityaltitudeOutsideAirTemp"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/densityaltitudepageOutsideAirTemp"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/densityaltitudeOutsideAirTempInput"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="@string/densityaltitudepageOutsideAirTempInput" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+        
+        <Button
+            android:id="@+id/densityaltitudepageCalculate"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.87"
+            android:text="@string/densityaltitudepageCalculate" android:textStyle="bold" android:textSize="20dp" android:layout_margin="20dp" android:layout_gravity="center"/>
+        
+                <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" android:layout_marginBottom="30dp" android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/densityaltitudeDensityAltitude"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/densityaltitudeDensityAltitude"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/densityaltitudeDensityAltitudeOutput"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="@string/densityaltitudepageDensityAltitudeOutput" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+        
+         
+</LinearLayout>

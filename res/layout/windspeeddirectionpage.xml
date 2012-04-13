@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/windspeeddirectionGroundSpeed"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/windspeeddirectionGroundSpeed"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/windspeeddirectionGroundSpeedSpinner"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/windspeeddirectionDroundSpeedInput"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/windspeeddirectionGroundSpeedInput" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+
+<TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/windspeeddirectionTrueSpeed"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/windspeeddirectionTrueSpeed"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <Spinner
+                android:id="@+id/windspeeddirectionTrueSpeedSpinner"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/windspeeddirectionTrueSpeedInput"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/windspeeddirectionTrueSpeedInput" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/windspeeddirectionCourse"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/windspeeddirectionCourse"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/windspeeddirectionCourseInput"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/windspeeddirectionCourseInput" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/windspeeddirectionHeading"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/windspeeddirectionHeading"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/windspeeddirectionHeadingInput"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/windspeeddirectionHeadingInput" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/windspeeddirectionCalculate"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.87"
+            android:text="@string/windspeeddirectionCalculate" android:textStyle="bold" android:textSize="20dp" android:layout_margin="20dp" android:layout_gravity="center"/>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/windspeeddirectionWindSpeed"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/windspeeddirectionWindSpeed"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/windspeeddirectionWindSpeedOutput"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/windspeeddirectionWindSpeedOutput" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/windspeeddirectionWindDirection"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/windspeeddirectionWindDirection"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/windspeeddirectionWindDirectionOutput"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/windspeeddirectionWindDirectionOutput" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+
+</LinearLayout>
