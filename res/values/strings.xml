@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <string name="hello">Hello World, FunFunActivity!</string>
-    <string name="app_name">FunFun</string>
+    <string name="app_name">Flight Planning Calculator</string>
     <string name="DefaultValue">0</string>
-    <string name="mainpageTitle">Title</string>
+    <string name="mainpageTitle">Team PFM - FPC</string>
     <string name="mainpageConversion">Conversions</string>
     <string name="mainpageCalculations">Calculations</string>
     <string name="mainpageAddDelete">Add/Delete</string>
@@ -13,5 +13,40 @@
     <string name="adddeletepageDelete">Delete</string>
     <string name="settingspageThemes">Themes</string>
     <string name="settingspageAbout">About</string>
-
+    <string name="conversionspageSpinnerText">PLEASE SELECT THE TYPE OF CONVERSIONS</string>
+    <string name="windspeeddirectionGroundSpeed">Ground Speed</string>
+	<string name="windspeeddirectionGroundSpeedInput">Input</string>
+	 <string name="windspeeddirectionTrueSpeed">True Speed</string>
+	<string name="windspeeddirectionTrueSpeedInput">Input</string>
+	 <string name="windspeeddirectionCourse">Course</string>
+	<string name="windspeeddirectionCourseInput">Input</string>
+	 <string name="windspeeddirectionHeading">Heading</string>
+	<string name="windspeeddirectionHeadingInput">Input</string>
+	 <string name="windspeeddirectionCalculate">Calculate</string>
+	 <string name="windspeeddirectionWindSpeed">Wind Speed</string>
+	<string name="windspeeddirectionWindSpeedOutput">Output</string>
+  	<string name="windspeeddirectionWindDirection">Wind Direction</string>
+	<string name="windspeeddirectionWindDirectionOutput">Output</string>
+	<string name="settingspageSpinnerPrompt">PLEASE SELECT AN OPTION FOR THE THEME</string>
+	<string name="conversionspageInput">Input</string>
+	<string name="conversionspageOutput">Output</string>
+	<string name="densityaltitudepagePressureAltitude">Pressure Altitude</string>
+	<string name="densityaltitudepageOutsideAirTemp">Outside Air Temperature</string>
+	<string name="densityaltitudepageOutsideAirTempInput">Input</string>
+	<string name="densityaltitudepagePressureAltitudeInput">Input</string>
+	<string name="densityaltitudepageDensityAltitude">Density Altitude</string>
+	<string name="densityaltitudepageDensityAltitudeOutput">Output</string>
+	<string name="conversionspageCalculate">Calculate</string>
+	<string name="densityaltitudepageCalculate">Calculate</string>
+	<string name="densityaltitudeDensityAltitude">Density Altitude</string>
+	<string name="densityaltitudeDensityAltitudeOutput">Output</string>
+	<string name="flyingdistancecourseDepartingAirport">Departing Airport</string>
+	<string name="flyingdistancecourseDestinationAirport">Destination Airport</string>
+	<string name="flyingdistancecourseCalculate">Calculate</string>
+	<string name="flyingdistancecourseDistanceUnit">Distance Unit</string>
+	<string name="flyingdistancecourseFlyingDistance">Flying Distance</string>
+	<string name="flyingdistancecourseCourse">Course</string>
+	<string name="flyingdistancecourseFlyingDistanceOutput">Output</string>
+	<string name="flyingdistancecourseCourseOutput">Output</string>
+	<string name="deletepageText">PLEASE SELECT THE ENTER TO DELETE</string>
 </resources>

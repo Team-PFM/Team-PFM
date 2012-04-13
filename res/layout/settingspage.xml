@@ -10,12 +10,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dip"
             android:textStyle="bold"
-            android:text="PLEASE SELECT AN OPTION FOR THE THEME" />
-    
-    <Spinner
-        android:id="@+id/settingspageThemes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:prompt="@string/settingspageAbout" android:layout_margin="15dp"/>
+            android:text="@string/settingspageSpinnerPrompt" />
+
+     <Spinner
+         android:id="@+id/settingspageThemes"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_margin="15dp"
+         android:prompt="@string/settingspageAbout" />
 
     <Button
         android:id="@+id/settingspageAbout"
