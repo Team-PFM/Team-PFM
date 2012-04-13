@@ -49,4 +49,5 @@
 	<string name="flyingdistancecourseFlyingDistanceOutput">Output</string>
 	<string name="flyingdistancecourseCourseOutput">Output</string>
 	<string name="deletepageText">PLEASE SELECT THE ENTER TO DELETE</string>
+	<string name="settings">settings</string>
 </resources>
