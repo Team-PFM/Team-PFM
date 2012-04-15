@@ -48,6 +48,31 @@
 	<string name="flyingdistancecourseCourse">Course</string>
 	<string name="flyingdistancecourseFlyingDistanceOutput">Output</string>
 	<string name="flyingdistancecourseCourseOutput">Output</string>
-	<string name="deletepageText">PLEASE SELECT THE ENTER TO DELETE</string>
-	<string name="settings">settings</string>
+	<string name="settings">settings</string><string name="deletepageText">PLEASE SELECT THE ENTER TO DELETE</string>
+	
+	
+	<string name="runway_direction_string">Runway Direction</string>
+    <string name="wind_direction_string">Wind Direction</string>
+    <string name="wind_speed_string">Wind Speed</string>
+    <string name="crosswind_string">Crosswind</string>
+    <string name="headwind_string">Headwind</string>
+    <string name="calculate_string">CALCULATE</string>
+    <string name="airport_id_string">Airport ID</string>
+    <string name="latitude_string">Latitude</string>
+    <string name="longitude_string">Longitude</string>
+    <string name="add_airport_string">ADD AIRPORT</string>
+    <string name="heading_gp_wca_string">Heading, Ground Speed, and Wind Correction Angle</string>
+    <string name="windspeed_winddirection_string">Wind Speed and Wind Direction</string>
+    <string name="density_altitude_string">Density Altitude</string>
+    <string name="true_airspeed_string">True Airspeed</string>
+    <string name="runway_winds_string">Runway Winds</string>
+    <string name="distance_course_between_airports_string">Flying Distance and Course Between Airports</string>
+    <string name="course_string">Course</string>
+    <string name="heading_string">Heading</string>
+    <string name="ground_speed_string">Ground Speed</string>
+    <string name="wind_correction_angle_string">Wind Corr. Angle</string>
+    <string name="indicated_airspeed_string">Indicated Airspeed</string>
+    <string name="mean_sea_level_altitude_string">Mean Sea Level Altitude</string>
+	
+	
 </resources>
