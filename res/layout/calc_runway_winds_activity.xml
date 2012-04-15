@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="*"
+    >
+
+    <TableRow android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:textSize="18dp" 
+            android:text="@string/runway_direction_string"/>
+
+        <EditText
+            android:id="@+id/input_runway_direction"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+
+    
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/wind_direction_string"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/input_wind_direction"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+    
+    
+    <TableRow android:paddingBottom="50dp">
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/wind_speed_string"
+            android:textSize="18dp" />
+
+       
+        <TableRow>
+
+            <Spinner
+                android:id="@+id/wind_speed_unit_spinner"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"/>
+
+        	<EditText
+            	android:id="@+id/input_wind_speed"
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:ems="3"
+            	android:inputType="numberDecimal" >
+            	<requestFocus />
+        	</EditText>
+           
+        </TableRow>
+
+    </TableRow>
+
+    <Button
+        android:id="@+id/calculate_runway_winds_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp" android:text="@string/calculate_string"/>
+    
+    <TableRow android:paddingTop="50dp">
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/crosswind_string"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/output_crosswind"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+    
+    
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:padding="3dip"
+            android:text="@string/headwind_string"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/output_headwind"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+
+</TableLayout>
