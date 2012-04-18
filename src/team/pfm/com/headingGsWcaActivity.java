@@ -3,12 +3,20 @@ package team.pfm.com;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
+
 
 public class headingGsWcaActivity extends Activity {
+	
+	private String trueAirspeedSelected;
+	private String windSpeedSelected;
+	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState); // call the superclass version
         setContentView(R.layout.calc_heading_gspeed_wcangle_activity); // set the layout
@@ -23,6 +31,8 @@ public class headingGsWcaActivity extends Activity {
         trueAirspeedSpinner.setAdapter(speedAdapter);
         windSpeedSpinner.setAdapter(speedAdapter);
         
+        trueAirspeedSpinner.setOnItemSelectedListener(new trueAirspeedSelectedListener());
+        windSpeedSpinner.setOnItemSelectedListener(new windSpeedSelectedListener());
         
         
 	}
@@ -52,6 +62,21 @@ public class headingGsWcaActivity extends Activity {
         course = Integer.parseInt(courseTextBox.getText().toString().trim());
         
         Checks check = new Checks();
+        Speed speed = new Speed();
+        
+        if(windSpeedSelected.equalsIgnoreCase("MPH")) {
+        	wspeed = speed.mphToKnots(wspeed);
+        }
+        else if(windSpeedSelected.equalsIgnoreCase("KPH")) {
+        	wspeed = speed.kmhToKnots(wspeed);
+        }
+        
+        if(trueAirspeedSelected.equalsIgnoreCase("MPH")) {
+        	tairspeed = speed.mphToKnots(tairspeed);
+        }
+        else if(trueAirspeedSelected.equalsIgnoreCase("KPH")) {
+        	tairspeed = speed.kmhToKnots(tairspeed);
+        }
         //Check for valid inputs and then get the heading, ground speed, and wind correction
         if(check.isDegValid(wdirection) && check.isDegValid(course)) {
         		heading = Calculation.calcHead(wspeed, wdirection, course, tairspeed);
@@ -67,4 +92,33 @@ public class headingGsWcaActivity extends Activity {
         	
         }
 	}
+	public class trueAirspeedSelectedListener implements OnItemSelectedListener {
+
+		public void onItemSelected(AdapterView<?> parent, View view, int pos,
+				long id) {
+			trueAirspeedSelected = parent.getItemAtPosition(pos).toString();
+		}
+
+		public void onNothingSelected(AdapterView<?> arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	
+	public class windSpeedSelectedListener implements OnItemSelectedListener {
+
+		public void onItemSelected(AdapterView<?> parent, View view, int pos,
+				long id) {
+			windSpeedSelected = parent.getItemAtPosition(pos).toString();
+		}
+
+		public void onNothingSelected(AdapterView<?> arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
 }
+
+
