@@ -21,13 +21,14 @@
             <Spinner
                 android:id="@+id/true_airspeed_unit_spinner"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content" />
+                android:prompt="@string/speedUnits"
+                android:layout_height="wrap_content" android:entries="@array/speedValues"/>
 
             <EditText
                 android:id="@+id/input_true_airspeed"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" >
+                android:inputType="numberDecimal" android:text="@string/zero">
 				
                 <requestFocus />
             </EditText>
@@ -47,15 +48,16 @@
 
 
             <Spinner
-                android:id="@+id/wind_speed_unit_string"
+                android:id="@+id/wind_speed_unit_spinner"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content" />
+                android:entries="@array/speedValues"
+                android:layout_height="wrap_content" android:prompt="@string/speedUnits"/>
 
             <EditText
                 android:id="@+id/input_wind_speed"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" >
+                android:inputType="numberDecimal" android:text="@string/zero">
 
                 <requestFocus />
             </EditText>
@@ -77,7 +79,7 @@
                 android:id="@+id/input_wind_direction"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" >
+                android:inputType="numberDecimal" android:text="@string/zero">
 
                 <requestFocus />
             </EditText>
@@ -99,7 +101,7 @@
                 android:id="@+id/input_course"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" >
+                android:inputType="numberDecimal" android:text="@string/zero">
                 
             	<requestFocus />
             </EditText>
@@ -110,6 +112,7 @@
             android:layout_width="200dp"
             android:layout_height="0dp"
             android:layout_weight="0.87"
+            android:onClick="calculate"
             android:text="@string/calculate_string" android:textStyle="bold" android:textSize="20dp" android:layout_margin="20dp" android:layout_gravity="center"/>
 
         
@@ -129,7 +132,7 @@
                 android:id="@+id/output_heading"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" >
+                android:inputType="numberDecimal" android:clickable="false" android:cursorVisible="false" android:focusable="false" android:focusableInTouchMode="false">
 
                 <requestFocus />
             </EditText>
@@ -151,7 +154,7 @@
                 android:id="@+id/output_gspeed"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" >
+                android:inputType="numberDecimal" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:cursorVisible="false">
 
                 <requestFocus />
             </EditText>
@@ -173,7 +176,7 @@
                 android:id="@+id/output_wcangle"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" >
+                android:inputType="numberDecimal" android:cursorVisible="false" android:clickable="false" android:focusable="false" android:focusableInTouchMode="false">
 
                 <requestFocus />
             </EditText>
