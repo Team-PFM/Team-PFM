@@ -3,7 +3,7 @@ package team.pfm.com;
 public class Checks {
 	//this class is used to check the varibles inputed by the user
 	//to see if the varibles arevalid inputs
-	//checks to see if any value inputed into this method is positive
+	//checks to see if any value inputed doubleo this method is positive
 	public boolean isPosValid(double val){
 		if (val >= 0){
 			return true;
@@ -20,7 +20,7 @@ public class Checks {
 		}
 	}
 	//checks to see if degree is a valid input
-	public boolean isDegValid(int deg){
+	public boolean isDegValid(double deg){
 		if(deg <= 360 && deg >= 0){
 			return true;
 		}else{
@@ -28,7 +28,7 @@ public class Checks {
 		}
 	}
 	//checks to see if deg min and sec are vaild inputs
-	public boolean isDegMinSecValid(int deg,int min, int sec){
+	public boolean isDegMinSecValid(double deg,double min, double sec){
 		if(deg == 360 && min ==0 && sec == 0){
 			return true;
 		}else if (deg >=0 && deg <360 && min >= 0 && min<60 && sec >= 0 && sec<60){

@@ -79,7 +79,7 @@
                 android:id="@+id/input_wind_direction"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:inputType="number" android:text="@string/zero">
+                android:inputType="numberDecimal" android:text="@string/zero">
 
                 <requestFocus />
             </EditText>
@@ -101,7 +101,7 @@
                 android:id="@+id/input_course"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:inputType="number" android:text="@string/zero">
+                android:inputType="numberDecimal" android:text="@string/zero">
                 
             	<requestFocus />
             </EditText>
