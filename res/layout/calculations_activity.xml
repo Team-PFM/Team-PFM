@@ -11,6 +11,7 @@
         android:layout_height="60dp"
         android:textSize="20dp" 
         android:text="@string/heading_gp_wca_string" 
+        android:onClick="headingGsWca"
         android:layout_marginBottom="20dp" android:layout_marginTop="10dp"/>
     
     <Button

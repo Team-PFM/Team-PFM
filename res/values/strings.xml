@@ -73,6 +73,13 @@
     <string name="wind_correction_angle_string">Wind Corr. Angle</string>
     <string name="indicated_airspeed_string">Indicated Airspeed</string>
     <string name="mean_sea_level_altitude_string">Mean Sea Level Altitude</string>
+    <string-array name="speedValues">
+        <item>MPH</item>
+        <item>Knots</item>
+        <item>KPH</item>
+    </string-array>
+    <string name="speedUnits">Speed Units</string>
+    <string name="zero">0</string>
 	
 	
 </resources>
