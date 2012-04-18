@@ -37,8 +37,13 @@ public class MainPageActivity extends Activity {
         }
     }
     
-    public void next(View view) {
+    public void adddelete(View view) {
     	Intent intent = new Intent(view.getContext(), addAndDeleteActivity.class);
+    	startActivity(intent);
+    }
+    
+    public void calculations(View view) {
+    	Intent intent = new Intent(view.getContext(), calculationsActivity.class);
     	startActivity(intent);
     }
 }

@@ -4,7 +4,7 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="8" />
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="10" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -20,6 +20,8 @@
         </activity>
         <activity android:name="addAndDeleteActivity"></activity>
         <activity android:name="SettingsActivity"></activity>
+        <activity android:name="calculationsActivity"></activity>
+        <activity android:name="headingGsWcaActivity"></activity>
     </application>
 
 </manifest>

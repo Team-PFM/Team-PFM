@@ -11,7 +11,7 @@
                 android:text="@string/mainpageTitle"
                 android:textSize="25dp"
                 android:textStyle="bold" 
-                android:layout_margin="15dp" android:layout_gravity="center"/>/>
+                android:layout_margin="15dp" android:layout_gravity="center"/>
    
     <Button
         android:id="@+id/mainPageConversions"
@@ -28,6 +28,7 @@ android:layout_gravity="center" android:layout_margin="15dp"/>
         android:text="@string/mainpageCalculations"
 		android:textStyle="bold"
 		android:textSize="25dp"
+		android:onClick="calculations"
 android:layout_gravity="center" android:layout_margin="15dp"/>
 
     <Button
@@ -36,6 +37,7 @@ android:layout_gravity="center" android:layout_margin="15dp"/>
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:text="@string/mainpageAddDelete"
+        android:onClick="adddelete"
         android:textSize="25dp"
         android:textStyle="bold" />
 
