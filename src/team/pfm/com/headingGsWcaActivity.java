@@ -50,16 +50,35 @@ public class headingGsWcaActivity extends Activity {
         //variables for inputs
         double tairspeed = 0;
         double wspeed = 0;
-        int wdirection = 0;
-        int course = 0;
+        double wdirection = 0;
+        double course = 0;
         double heading = 0;
         double gspeed = 0;
         double wcorrection = 0;
         //Get values from input boxes
+        try{
         tairspeed = Double.parseDouble(trueAirspeedTextBox.getText().toString().trim());
+        } catch (Exception e) {
+        	Toast.makeText(getApplicationContext(), "Please enter a valid number in the airspeed!", 5).show();
+        }
+        
+        try{
         wspeed = Double.parseDouble(windSpeedTextBox.getText().toString().trim());
-        wdirection = Integer.parseInt(windDirectionTextBox.getText().toString().trim());
-        course = Integer.parseInt(courseTextBox.getText().toString().trim());
+        } catch (Exception e) {
+        	Toast.makeText(getApplicationContext(), "Please enter a valid number in the wind speed!", 5).show();
+        }
+        
+        try { 
+        wdirection = Double.parseDouble(windDirectionTextBox.getText().toString().trim());
+        } catch (Exception e) {
+        	Toast.makeText(getApplicationContext(), "Please enter a valid number in the wind direction!", 5).show();
+        }
+        
+        try {
+        course = Double.parseDouble(courseTextBox.getText().toString().trim());
+        } catch (Exception e) {
+        	Toast.makeText(getApplicationContext(), "Please enter a valid number in the course!", 5).show();
+        }
         
         Checks check = new Checks();
         Speed speed = new Speed();
@@ -80,16 +99,16 @@ public class headingGsWcaActivity extends Activity {
         //Check for valid inputs and then get the heading, ground speed, and wind correction
         if(check.isDegValid(wdirection) && check.isDegValid(course)) {
         		heading = Calculation.calcHead(wspeed, wdirection, course, tairspeed);
-        		headingTextBox.setText(String.valueOf(heading));
+        		headingTextBox.setText(String.format("%.2f", heading));
         		
         		gspeed = Calculation.calcGroSpeed(wspeed, wdirection, course, tairspeed);
-        		groundSpeedTextBox.setText(String.valueOf(gspeed));
+        		groundSpeedTextBox.setText(String.format("%.2f", gspeed));
         		
         		wcorrection = Calculation.calcCorAng(wspeed, wdirection, tairspeed, course);
-        		windCorrectionTextBox.setText(String.valueOf(wcorrection));
+        		windCorrectionTextBox.setText(String.format("%.2f", wcorrection));
         }
         else {
-        	
+        	Toast.makeText(getApplicationContext(), "Please make sure the wind direction is between 0-360, and the course is between 0-360!", 5).show();
         }
 	}
 	public class trueAirspeedSelectedListener implements OnItemSelectedListener {
