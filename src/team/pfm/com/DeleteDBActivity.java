@@ -28,7 +28,7 @@ public class DeleteDBActivity extends Activity implements OnItemSelectedListener
         }
 	
         //Creating adapter with the string array ids and adding it to spinner
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,ids );
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,ids);
         delete =(Spinner)findViewById(R.id.deletepageSpinner);
         delete.setAdapter(adapter);
         delete.setOnItemSelectedListener(this);

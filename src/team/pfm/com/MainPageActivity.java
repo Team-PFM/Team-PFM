@@ -14,13 +14,14 @@ public class MainPageActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState); // call the superclass version
         setContentView(R.layout.mainpage); // set the layout
+        startActivity(new Intent(this, popupActivity.class));
         
     }
     
-    public void onResume()
+    public void onStart()
     {
-    	startActivity(new Intent(this, popupActivity.class));
-    	super.onResume();
+    	super.onStart();
+    	
     }
     
     public boolean onCreateOptionsMenu(Menu menu) {

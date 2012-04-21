@@ -2,7 +2,9 @@ package team.pfm.com;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.view.View;
 
 public class popupActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
@@ -11,12 +13,12 @@ public class popupActivity extends Activity {
         
     }
 	
-	public void defaultList() {
+	public void defaultList(View view) {
 		FPCDatabase.initDefault();
 		finish();
 	}
 	
-	public void customList() {
+	public void customList(View view) {
 		Intent intent = getIntent();
 		String filename = intent.getDataString();
 		FPCDatabase.initAirCustom(filename);

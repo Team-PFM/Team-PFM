@@ -13,6 +13,8 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
+import android.content.res.AssetManager;
+
 
 public class FPCDatabase {
 	
@@ -20,7 +22,7 @@ public class FPCDatabase {
 	private static ArrayList airID;
 	private static ArrayList lat;
 	private static ArrayList lon;
-	private static File defaultList = new File("defaultAirports41.txt");
+	private static File defaultList = new File("defaultairports41.txt");
 	
 	//getter for list of airport IDs, this is needed to list the ids when choosing or deleting them in the interface
 	public static  ArrayList getAirID() {
