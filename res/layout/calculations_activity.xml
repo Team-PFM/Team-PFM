@@ -20,6 +20,7 @@
         android:layout_height="60dp"
         android:textSize="20dp" 
         android:text="@string/windspeed_winddirection_string" 
+        android:onClick="windspeeddirection"
         android:layout_marginBottom="20dp"/>
     
     <Button
@@ -28,6 +29,7 @@
         android:layout_height="60dp"
         android:textSize="20dp" 
         android:text="@string/true_airspeed_string" 
+        android:onClick="trueAirspeed"
         android:layout_marginBottom="20dp"/>
     
     <Button
@@ -36,6 +38,7 @@
         android:layout_height="60dp"
         android:textSize="20dp" 
         android:text="@string/density_altitude_string" 
+        android:onClick="densityAltitude"
         android:layout_marginBottom="20dp"/>
     
     <Button
@@ -44,6 +47,7 @@
         android:layout_height="60dp"
         android:textSize="20dp" 
         android:text="@string/runway_winds_string" 
+        android:onClick="runwayWinds"
         android:layout_marginBottom="20dp"/>
     
     <Button
@@ -52,6 +56,7 @@
         android:layout_height="60dp"
         android:textSize="20dp" 
         android:text="@string/distance_course_between_airports_string" 
+        android:onClick="distanceCourse"
         android:layout_marginBottom="20dp"/>
     
     

@@ -17,15 +17,20 @@ import java.util.StringTokenizer;
 public class FPCDatabase {
 	
 	 //variables
-	private ArrayList airID;
-	private ArrayList lat;
-	private ArrayList lon;
+	private static ArrayList airID;
+	private static ArrayList lat;
+	private static ArrayList lon;
 	private File defaultList = new File("defaultAirports41.txt");
 	
+	//getter for list of airport IDs, this is needed to list the ids when choosing or deleting them in the interface
+	public static  ArrayList getAirID() {
+		return airID;
+	}
+
 	//methods
 	//constructor
 	//initialize default  arrays and populates them by reading in default text file
-	public FPCDatabase(){
+	public void initDefault(){
 		airID = new ArrayList(30);
 		lat = new ArrayList(30);
 		lon = new ArrayList(30);
@@ -115,7 +120,7 @@ public class FPCDatabase {
 	
 	
 	//method adds new airport ID's and info added by the user
-	public  void addAir(String id, double latitiude, double longitude){
+	public static  void addAir(String id, double latitiude, double longitude){
 		boolean idInUse = false;
 		int idLoc =0;
 		//this first checks to see if the id is already in use or not
@@ -137,7 +142,7 @@ public class FPCDatabase {
 		}
 	}
 	//method deletes airport ID and info from "database"
-	public void delAir(String id){
+	public static void delAir(String id){
 		int idToDelete= 0; //making this 0 is okay initially bc the removal of the data will not occur unless idFound is set to true
 		boolean idFound = false;
 		//finding the tuple id for the ID to delete
@@ -156,7 +161,7 @@ public class FPCDatabase {
 	}
 	
 	//method to access airport lat and long coordinates, if there is no airport for the ID, it returns "1000000" for cord(kind of like an error code)
-	public  double[] accsAir(String id){
+	public static  double[] accsAir(String id){
 		double []cord = new double[2];
 		int idToAccs= 0;//making this 0 is okay initially bc the access of the data will not occur unless idFound is set to true
 		double latitude, longitude;
@@ -175,18 +180,28 @@ public class FPCDatabase {
 			cord[0]= latitude;
 			cord[1]= longitude;
 		}
-		else {
-			cord[0] = 1000000;
-		}
+		
 		return cord;//returns the array of lat in first spot and long in second spot
 	}
 
 	//method to clear the database in preparation for custom db list
-	public void ClearDB(){
+	public static void ClearDB(){
 		airID.clear();
 		lat.clear();
 		lon.clear();
 	}
+	
+	//method to check the database first before accessing it
+		public static void CheckDB(String id){
+			boolean status;
+			if(airID.contains(id)){
+				status = true;
+			}
+			else{
+				status = false;
+			}
+			
+		}
 	
 
 }

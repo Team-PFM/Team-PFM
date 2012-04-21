@@ -24,10 +24,10 @@
                 android:layout_height="wrap_content" />
 
             <EditText
-                android:id="@+id/windspeeddirectionDroundSpeedInput"
+                android:id="@+id/windspeeddirectionGroundSpeedInput"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="@string/windspeeddirectionGroundSpeedInput" >
+                android:text="@string/zero" android:inputType="numberDecimal">
 
                 <requestFocus />
             </EditText>
@@ -56,7 +56,8 @@
                 android:id="@+id/windspeeddirectionTrueSpeedInput"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="@string/windspeeddirectionTrueSpeedInput" >
+                android:text="@string/zero" 
+                android:inputType="numberDecimal">
 
                 <requestFocus />
             </EditText>
@@ -78,7 +79,8 @@
                 android:id="@+id/windspeeddirectionCourseInput"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="@string/windspeeddirectionCourseInput" >
+                android:text="@string/zero" 
+                android:inputType="numberDecimal">
 
                 <requestFocus />
             </EditText>
@@ -101,14 +103,16 @@
                 android:id="@+id/windspeeddirectionHeadingInput"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="@string/windspeeddirectionHeadingInput" />
+                android:text="@string/zero" 
+                android:inputType="numberDecimal"/>
         </TableRow>
 
         <Button
             android:id="@+id/windspeeddirectionCalculate"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_height= "0dip"
             android:layout_weight="0.87"
+            android:onClick="calculate"
             android:text="@string/windspeeddirectionCalculate" android:textStyle="bold" android:textSize="20dp" android:layout_margin="20dp" android:layout_gravity="center"/>
 
         <TableRow
@@ -133,7 +137,8 @@
                 android:id="@+id/windspeeddirectionWindSpeedOutput"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="@string/windspeeddirectionWindSpeedOutput" >
+                android:inputType="numberDecimal"
+                android:text="@string/zero" >
 
                 <requestFocus />
             </EditText>
@@ -150,12 +155,13 @@
                 android:text="@string/windspeeddirectionWindDirection"
                 android:textSize="16dp"
                 android:textStyle="bold" />
-
+
             <EditText
                 android:id="@+id/windspeeddirectionWindDirectionOutput"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="@string/windspeeddirectionWindDirectionOutput" >
+                android:inputType="numberDecimal"
+                android:text="@string/zero" >
 
                 <requestFocus />
             </EditText>

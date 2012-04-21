@@ -80,6 +80,7 @@
     </string-array>
     <string name="speedUnits">Speed Units</string>
     <string name="zero">0</string>
+    <string name="delete">Delete</string>
 	
 	
 </resources>
