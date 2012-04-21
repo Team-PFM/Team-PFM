@@ -20,7 +20,7 @@ public class FPCDatabase {
 	private static ArrayList airID;
 	private static ArrayList lat;
 	private static ArrayList lon;
-	private File defaultList = new File("defaultAirports41.txt");
+	private static File defaultList = new File("defaultAirports41.txt");
 	
 	//getter for list of airport IDs, this is needed to list the ids when choosing or deleting them in the interface
 	public static  ArrayList getAirID() {
@@ -30,7 +30,7 @@ public class FPCDatabase {
 	//methods
 	//constructor
 	//initialize default  arrays and populates them by reading in default text file
-	public void initDefault(){
+	public static void initDefault(){
 		airID = new ArrayList(30);
 		lat = new ArrayList(30);
 		lon = new ArrayList(30);
@@ -56,8 +56,8 @@ public class FPCDatabase {
 	}
 	
 	//initialize custom method creates arrays and populates them by reading in default text file, you pass the whole name of the file ex: "name.txt"
-	public  void initAirCustom(String file){
-		this.ClearDB();//fisrt gets rid of the values in the database before loading it with the new file
+	public static void initAirCustom(String file){
+		ClearDB();//fisrt gets rid of the values in the database before loading it with the new file
 		int counter = 0;
 		try {
 			Scanner input = new Scanner(new File (file));

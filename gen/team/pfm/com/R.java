@@ -30,6 +30,7 @@ public final class R {
         public static final int conversionspageOutput=0x7f07002b;
         public static final int conversionspageSpinnerPrompt=0x7f070027;
         public static final int conversionspageTypeofConversionsSpinner=0x7f070028;
+        public static final int defaultListButton=0x7f07004c;
         public static final int deleetpageText=0x7f07002e;
         public static final int delete_button=0x7f070030;
         public static final int deletepageSpinner=0x7f07002f;
@@ -78,7 +79,7 @@ public final class R {
         public static final int output_true_airspeed=0x7f070020;
         public static final int output_wcangle=0x7f070017;
         public static final int runway_winds_button=0x7f070025;
-        public static final int settings=0x7f07005b;
+        public static final int settings=0x7f07005e;
         public static final int settingspageAbout=0x7f07004a;
         public static final int settingspageThemes=0x7f070049;
         public static final int spinner_label=0x7f070048;
@@ -86,29 +87,31 @@ public final class R {
         public static final int tableRow2=0x7f07000a;
         public static final int tableRow3=0x7f07000d;
         public static final int tableRow4=0x7f07000f;
-        public static final int tableRow5=0x7f070056;
+        public static final int tableRow5=0x7f070059;
         public static final int tableRow6=0x7f070012;
         public static final int tableRow7=0x7f070014;
         public static final int tableRow8=0x7f070016;
         public static final int true_airspeed_button=0x7f070023;
         public static final int true_airspeed_unit_spinner=0x7f070008;
+        public static final int userListButton=0x7f07004d;
+        public static final int welcomeText=0x7f07004b;
         public static final int wind_speed_unit_spinner=0x7f07000b;
         public static final int windspeed_winddirection_button=0x7f070022;
-        public static final int windspeeddirectionCalculate=0x7f070055;
-        public static final int windspeeddirectionCourse=0x7f070051;
-        public static final int windspeeddirectionCourseInput=0x7f070052;
-        public static final int windspeeddirectionGroundSpeed=0x7f07004b;
-        public static final int windspeeddirectionGroundSpeedInput=0x7f07004d;
-        public static final int windspeeddirectionGroundSpeedSpinner=0x7f07004c;
-        public static final int windspeeddirectionHeading=0x7f070053;
-        public static final int windspeeddirectionHeadingInput=0x7f070054;
-        public static final int windspeeddirectionTrueSpeed=0x7f07004e;
-        public static final int windspeeddirectionTrueSpeedInput=0x7f070050;
-        public static final int windspeeddirectionTrueSpeedSpinner=0x7f07004f;
-        public static final int windspeeddirectionWindDirection=0x7f070059;
-        public static final int windspeeddirectionWindDirectionOutput=0x7f07005a;
-        public static final int windspeeddirectionWindSpeed=0x7f070057;
-        public static final int windspeeddirectionWindSpeedOutput=0x7f070058;
+        public static final int windspeeddirectionCalculate=0x7f070058;
+        public static final int windspeeddirectionCourse=0x7f070054;
+        public static final int windspeeddirectionCourseInput=0x7f070055;
+        public static final int windspeeddirectionGroundSpeed=0x7f07004e;
+        public static final int windspeeddirectionGroundSpeedInput=0x7f070050;
+        public static final int windspeeddirectionGroundSpeedSpinner=0x7f07004f;
+        public static final int windspeeddirectionHeading=0x7f070056;
+        public static final int windspeeddirectionHeadingInput=0x7f070057;
+        public static final int windspeeddirectionTrueSpeed=0x7f070051;
+        public static final int windspeeddirectionTrueSpeedInput=0x7f070053;
+        public static final int windspeeddirectionTrueSpeedSpinner=0x7f070052;
+        public static final int windspeeddirectionWindDirection=0x7f07005c;
+        public static final int windspeeddirectionWindDirectionOutput=0x7f07005d;
+        public static final int windspeeddirectionWindSpeed=0x7f07005a;
+        public static final int windspeeddirectionWindSpeedOutput=0x7f07005b;
     }
     public static final class layout {
         public static final int about_activity=0x7f030000;
@@ -125,7 +128,8 @@ public final class R {
         public static final int flyingdistancecoursepage=0x7f03000b;
         public static final int mainpage=0x7f03000c;
         public static final int settingspage=0x7f03000d;
-        public static final int windspeeddirectionpage=0x7f03000e;
+        public static final int startingpopup=0x7f03000e;
+        public static final int windspeeddirectionpage=0x7f03000f;
     }
     public static final class menu {
         public static final int app_menu=0x7f060000;
@@ -144,6 +148,7 @@ public final class R {
         public static final int conversionspageSpinnerText=0x7f04000c;
         public static final int course_string=0x7f040041;
         public static final int crosswind_string=0x7f040034;
+        public static final int defaultAirportList=0x7f04004b;
         public static final int delete=0x7f040049;
         public static final int deletepageText=0x7f040030;
         public static final int density_altitude_string=0x7f04003d;
@@ -187,6 +192,8 @@ public final class R {
         public static final int settingspageThemes=0x7f04000a;
         public static final int speedUnits=0x7f040047;
         public static final int true_airspeed_string=0x7f04003e;
+        public static final int userList=0x7f04004c;
+        public static final int welcomeText=0x7f04004a;
         public static final int wind_correction_angle_string=0x7f040044;
         public static final int wind_direction_string=0x7f040032;
         public static final int wind_speed_string=0x7f040033;

@@ -17,6 +17,12 @@ public class MainPageActivity extends Activity {
         
     }
     
+    public void onResume()
+    {
+    	startActivity(new Intent(this, popupActivity.class));
+    	super.onResume();
+    }
+    
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.app_menu, menu);
