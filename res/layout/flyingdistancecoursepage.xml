@@ -59,7 +59,7 @@
         <Spinner
             android:id="@+id/flyingdistancecourseDistanceUnitSpinner"
             android:layout_width="200dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content" android:entries="@array/distance_units"/>
     </TableRow>
 
     <Button
@@ -72,7 +72,7 @@
         android:layout_weight="0.87"
         android:text="@string/flyingdistancecourseCalculate"
         android:textSize="20dp"
-        android:textStyle="bold" />
+        android:textStyle="bold" android:onClick="calculate"/>
 
     <TableRow
         android:id="@+id/tableRow6"

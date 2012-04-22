@@ -201,14 +201,14 @@ public class FPCDatabase {
 	}
 
 	//method to check the database first before accessing it
-	public static void CheckDB(String id){
+	public static boolean CheckDB(String id){
 		@SuppressWarnings("unused")
 		boolean status;
 		if(airID.contains(id)){
-			status = true;
+			return true;
 		}
 		else{
-			status = false;
+			return false;
 		}
 
 	}
