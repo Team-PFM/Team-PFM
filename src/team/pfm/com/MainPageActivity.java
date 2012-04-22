@@ -7,9 +7,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.LinearLayout;
 
 public class MainPageActivity extends Activity {
     /** Called when the activity is first created. */
@@ -17,7 +14,14 @@ public class MainPageActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState); // call the superclass version
         setContentView(R.layout.mainpage); // set the layout
+        startActivity(new Intent(this, popupActivity.class));
         
+    }
+    
+    public void onStart()
+    {
+    	super.onStart();
+    	
     }
     
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -44,6 +48,11 @@ public class MainPageActivity extends Activity {
     
     public void calculations(View view) {
     	Intent intent = new Intent(view.getContext(), calculationsActivity.class);
+    	startActivity(intent);
+    }
+    
+    public void documents(View view) {
+    	Intent intent = new Intent(view.getContext(), documentsActivity.class);
     	startActivity(intent);
     }
 }
