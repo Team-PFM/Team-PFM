@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.StringTokenizer;
+import android.content.Context;
 
 import android.content.res.AssetManager;
 
@@ -22,7 +23,7 @@ public class FPCDatabase {
 	private static ArrayList airID;
 	private static ArrayList lat;
 	private static ArrayList lon;
-	private static File defaultList = new File("defaultairports41.txt");
+	//private static File defaultList = new File("defaultairports41.txt");
 	
 	//getter for list of airport IDs, this is needed to list the ids when choosing or deleting them in the interface
 	public static  ArrayList getAirID() {
@@ -32,13 +33,13 @@ public class FPCDatabase {
 	//methods
 	//constructor
 	//initialize default  arrays and populates them by reading in default text file
-	public static void initDefault(){
-		airID = new ArrayList(30);
-		lat = new ArrayList(30);
-		lon = new ArrayList(30);
+	public static void initDefault(Scanner s){
+		airID = new ArrayList(3000);
+		lat = new ArrayList(3000);
+		lon = new ArrayList(3000);
 		int counter = 0;
 		try {
-			Scanner input = new Scanner(defaultList);
+			Scanner input = s;
 			while(input.hasNextLine()){
 				String a = input.nextLine();
 				StringTokenizer st = new StringTokenizer(a, ",");
@@ -51,7 +52,7 @@ public class FPCDatabase {
 				//System.out.println(id + "  " + lat1 + "  " + lat1); for tests
 				counter = counter + 1;
 			}
-		} catch (FileNotFoundException e) {
+		} catch (Exception e) {
 			System.out.println("defaultAirports41.txt file could not be found");
 			e.printStackTrace();
 		}
@@ -59,7 +60,9 @@ public class FPCDatabase {
 	
 	//initialize custom method creates arrays and populates them by reading in default text file, you pass the whole name of the file ex: "name.txt"
 	public static void initAirCustom(String file){
-		ClearDB();//fisrt gets rid of the values in the database before loading it with the new file
+		airID = new ArrayList(3000);
+		lat = new ArrayList(3000);
+		lon = new ArrayList(3000);
 		int counter = 0;
 		try {
 			Scanner input = new Scanner(new File (file));
@@ -72,6 +75,7 @@ public class FPCDatabase {
 				airID.add(counter,id);
 				lat.add(counter, lat1);
 				lon.add(counter,lon1);
+				System.out.println(counter);
 				//System.out.println(id + "  " + lat1 + "  " + lat1); for tests
 				counter = counter + 1;
 			}
@@ -188,9 +192,12 @@ public class FPCDatabase {
 
 	//method to clear the database in preparation for custom db list
 	public static void ClearDB(){
-		airID.clear();
-		lat.clear();
-		lon.clear();
+		if(!airID.isEmpty())
+			airID.clear();
+		if(!lat.isEmpty())
+			lat.clear();
+		if(!lon.isEmpty())
+			lon.clear();
 	}
 	
 	//method to check the database first before accessing it

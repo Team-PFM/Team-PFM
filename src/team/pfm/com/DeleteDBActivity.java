@@ -10,6 +10,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class DeleteDBActivity extends Activity implements OnItemSelectedListener {
 	String[] ids ;
@@ -23,8 +24,9 @@ public class DeleteDBActivity extends Activity implements OnItemSelectedListener
         
         //get list of ids from database class
         ArrayList idArray = FPCDatabase.getAirID();  //returning the array list from database class to then get values
+        ids = new String[idArray.size()];
         for(int i = 0;i<idArray.size();i++){
-        ids[i] = (String) idArray.get(i);  //taking every id from the arraylist in the database and adding it to the string array ids
+        	ids[i] = (String) idArray.get(i);  //taking every id from the arraylist in the database and adding it to the string array ids
         }
 	
         //Creating adapter with the string array ids and adding it to spinner
@@ -34,14 +36,12 @@ public class DeleteDBActivity extends Activity implements OnItemSelectedListener
         delete.setOnItemSelectedListener(this);
         
         // button for pressing delete
-        //TODO: add a button id to the "deletepage.xml" so this reference below works
         deleteButton = (Button)findViewById(R.id.delete_button);
         deleteButton.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				FPCDatabase.delAir(ids[position]);  //calling delete method passing string in the ids array at position selected
-				
+				finish();
 			}
 		});
         

@@ -52,6 +52,7 @@ public class AddDBActivity extends Activity {
 		 //checks if the id is of right length, then adds 
 		 if(id.length()==3){
 			 FPCDatabase.addAir(id, lat, lon);
+			 finish();
 		 }
 		 else{
 			 Toast.makeText(getApplicationContext(), "Please enter a valid id of length 3!", 5).show();
