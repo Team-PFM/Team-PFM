@@ -10,7 +10,6 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 public class DeleteDBActivity extends Activity implements OnItemSelectedListener {
 	String[] ids ;
@@ -23,7 +22,7 @@ public class DeleteDBActivity extends Activity implements OnItemSelectedListener
         setContentView(R.layout.deletepage); // set the layout
         
         //get list of ids from database class
-        ArrayList idArray = FPCDatabase.getAirID();  //returning the array list from database class to then get values
+        ArrayList<?> idArray = FPCDatabase.getAirID();  //returning the array list from database class to then get values
         ids = new String[idArray.size()];
         for(int i = 0;i<idArray.size();i++){
         	ids[i] = (String) idArray.get(i);  //taking every id from the arraylist in the database and adding it to the string array ids
