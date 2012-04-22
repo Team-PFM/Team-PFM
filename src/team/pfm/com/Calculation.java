@@ -6,7 +6,6 @@ package team.pfm.com;
  */
 
 
-import java.lang.reflect.Array;
 public class Calculation {
 // Calculation methods
 	

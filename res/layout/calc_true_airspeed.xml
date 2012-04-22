@@ -20,8 +20,8 @@
 
             <Spinner
                 android:id="@+id/indicated_airspeed_unit_spinner"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"/>
+                android:layout_width="120dp"
+                android:layout_height="wrap_content" android:prompt="@string/speedUnits"/>
 
         	<EditText
             	android:id="@+id/input_indicated_airspeed"
@@ -52,7 +52,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="7"
-            android:inputType="numberDecimal" android:text="@string/zero">
+            android:inputType="numberSigned" android:text="@string/zero">
 
             <requestFocus />
         </EditText>
@@ -63,7 +63,7 @@
         android:id="@+id/calculate_true_airspeed_button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp" android:text="@string/calculate_string"/>
+        android:textSize="20dp" android:text="@string/calculate_string" android:onClick="calculate"/>
     
     <TableRow android:paddingTop="50dp">
 
