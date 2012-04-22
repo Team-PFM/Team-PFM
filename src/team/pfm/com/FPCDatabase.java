@@ -12,21 +12,18 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.StringTokenizer;
-import android.content.Context;
-
-import android.content.res.AssetManager;
 
 
 public class FPCDatabase {
-	
-	 //variables
-	private static ArrayList airID;
-	private static ArrayList lat;
-	private static ArrayList lon;
+
+	//variables
+	private static ArrayList<String> airID;
+	private static ArrayList<Double> lat;
+	private static ArrayList<Double> lon;
 	//private static File defaultList = new File("defaultairports41.txt");
-	
+
 	//getter for list of airport IDs, this is needed to list the ids when choosing or deleting them in the interface
-	public static  ArrayList getAirID() {
+	public static  ArrayList<String> getAirID() {
 		return airID;
 	}
 
@@ -34,9 +31,9 @@ public class FPCDatabase {
 	//constructor
 	//initialize default  arrays and populates them by reading in default text file
 	public static void initDefault(Scanner s){
-		airID = new ArrayList(3000);
-		lat = new ArrayList(3000);
-		lon = new ArrayList(3000);
+		airID = new ArrayList<String>(3000);
+		lat = new ArrayList<Double>(3000);
+		lon = new ArrayList<Double>(3000);
 		int counter = 0;
 		try {
 			Scanner input = s;
@@ -57,12 +54,12 @@ public class FPCDatabase {
 			e.printStackTrace();
 		}
 	}
-	
+
 	//initialize custom method creates arrays and populates them by reading in default text file, you pass the whole name of the file ex: "name.txt"
 	public static void initAirCustom(String file){
-		airID = new ArrayList(3000);
-		lat = new ArrayList(3000);
-		lon = new ArrayList(3000);
+		airID = new ArrayList<String>(3000);
+		lat = new ArrayList<Double>(3000);
+		lon = new ArrayList<Double>(3000);
 		int counter = 0;
 		try {
 			Scanner input = new Scanner(new File (file));
@@ -83,48 +80,51 @@ public class FPCDatabase {
 			System.out.println(file + " file could not be found");
 			e.printStackTrace();
 		}
-		}
-	
-	
+	}
+
+
 	//check method checks to make sure the file syntax is of proper from, ex: " ID, lat(in radians), long(in radians) "
 	//pass the full file name : "name.txt"
 	public static boolean checkFileExistAndSyntax(String file){
 		boolean status = true; //assumes text file is correct initially
 		double tokensMatch;//every line read from the text file should have 3 tokens separated from commas : ID, Lat, Long
-		
-				try {
-					File fileTT = new File(file);
-					Scanner inputCh = new Scanner(fileTT);
-					while(inputCh.hasNextLine()){
-						String line = inputCh.nextLine();
-						StringTokenizer a = new StringTokenizer(line, ",");
-						tokensMatch = a.countTokens();
-						try{
-							String id = a.nextToken();
-							double latT = Double.parseDouble(a.nextToken());
-							double lonT= Double.parseDouble(a.nextToken());
-						
-						}catch( NoSuchElementException e ){//catching if any parsing of the tokens does not match double or string format
-							status = false;
-							break; //exiting loop since tokens are not of proper format
-						}
-							//now making sure the syntax and commas are correct
-							if(tokensMatch != 3 ){
-								status = false;
-								break; //exiting loop since at least one line is not written correctly
-							} 
-					}
-				} catch (FileNotFoundException e) {
-					status = false;//catching the error is the file is not found
+
+		try {
+			File fileTT = new File(file);
+			Scanner inputCh = new Scanner(fileTT);
+			while(inputCh.hasNextLine()){
+				String line = inputCh.nextLine();
+				StringTokenizer a = new StringTokenizer(line, ",");
+				tokensMatch = a.countTokens();
+				try{
+					@SuppressWarnings("unused")
+					String id = a.nextToken();
+					@SuppressWarnings("unused")
+					double latT = Double.parseDouble(a.nextToken());
+					@SuppressWarnings("unused")
+					double lonT= Double.parseDouble(a.nextToken());
+
+				}catch( NoSuchElementException e ){//catching if any parsing of the tokens does not match double or string format
+					status = false;
+					break; //exiting loop since tokens are not of proper format
 				}
-				
-				return status;
+				//now making sure the syntax and commas are correct
+				if(tokensMatch != 3 ){
+					status = false;
+					break; //exiting loop since at least one line is not written correctly
+				} 
 			}
-			
-		
-	
-	
-	
+		} catch (FileNotFoundException e) {
+			status = false;//catching the error is the file is not found
+		}
+
+		return status;
+	}
+
+
+
+
+
 	//method adds new airport ID's and info added by the user
 	public static  void addAir(String id, double latitiude, double longitude){
 		boolean idInUse = false;
@@ -165,7 +165,7 @@ public class FPCDatabase {
 			lon.remove(idToDelete);
 		}	
 	}
-	
+
 	//method to access airport lat and long coordinates, if there is no airport for the ID, it returns "1000000" for cord(kind of like an error code)
 	public static  double[] accsAir(String id){
 		double []cord = new double[2];
@@ -186,7 +186,7 @@ public class FPCDatabase {
 			cord[0]= latitude;
 			cord[1]= longitude;
 		}
-		
+
 		return cord;//returns the array of lat in first spot and long in second spot
 	}
 
@@ -199,18 +199,17 @@ public class FPCDatabase {
 		if(!lon.isEmpty())
 			lon.clear();
 	}
-	
-	//method to check the database first before accessing it
-		public static void CheckDB(String id){
-			boolean status;
-			if(airID.contains(id)){
-				status = true;
-			}
-			else{
-				status = false;
-			}
-			
-		}
-	
 
+	//method to check the database first before accessing it
+	public static void CheckDB(String id){
+		@SuppressWarnings("unused")
+		boolean status;
+		if(airID.contains(id)){
+			status = true;
+		}
+		else{
+			status = false;
+		}
+
+	}
 }

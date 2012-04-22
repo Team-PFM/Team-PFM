@@ -1,11 +1,9 @@
 package team.pfm.com;
 
-import java.io.File;
 import java.util.Scanner;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
