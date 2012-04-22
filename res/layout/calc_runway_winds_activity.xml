@@ -19,7 +19,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="7"
-            android:inputType="numberDecimal" >
+            android:inputType="numberDecimal" android:text="@string/zero">
 
             <requestFocus />
         </EditText>
@@ -41,7 +41,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="7"
-            android:inputType="numberDecimal" >
+            android:inputType="numberDecimal" android:text="@string/zero">
 
             <requestFocus />
         </EditText>
@@ -71,7 +71,7 @@
             	android:layout_width="fill_parent"
             	android:layout_height="wrap_content"
             	android:ems="3"
-            	android:inputType="numberDecimal" >
+            	android:inputType="numberDecimal" android:text="@string/zero">
             	<requestFocus />
         	</EditText>
            
@@ -99,7 +99,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="7"
-            android:inputType="numberDecimal" >
+            android:inputType="numberDecimal" android:cursorVisible="false" android:clickable="false" android:focusable="false" android:focusableInTouchMode="false">
 
             <requestFocus />
         </EditText>
@@ -121,7 +121,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="7"
-            android:inputType="numberDecimal" >
+            android:inputType="numberDecimal" android:focusableInTouchMode="false" android:focusable="false" android:clickable="false" android:cursorVisible="false">
 
             <requestFocus />
         </EditText>
