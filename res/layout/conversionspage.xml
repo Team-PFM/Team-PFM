@@ -42,7 +42,7 @@
            <EditText
            android:id="@+id/conversionspageInput"
            android:layout_width="120dp"
-           android:layout_height="wrap_content" android:text="@string/conversionspageInput">
+           android:layout_height="wrap_content" android:inputType="numberSigned|numberDecimal">
 
            <requestFocus />
        	   </EditText>
@@ -62,7 +62,7 @@
            <EditText
            android:id="@+id/conversionspageOutput"
            android:layout_width="120dp"
-           android:layout_height="wrap_content" android:text="@string/conversionspageOutput">
+           android:layout_height="wrap_content" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:cursorVisible="false">
 
            <requestFocus />
        	   </EditText>

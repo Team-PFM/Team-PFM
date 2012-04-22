@@ -9,7 +9,7 @@
         android:id="@+id/heading_gs_wca_button"
         android:layout_width="fill_parent"
         android:layout_height="60dp"
-        android:textSize="20dp" 
+        android:textSize="17dp" 
         android:text="@string/heading_gp_wca_string" 
         android:onClick="headingGsWca"
         android:layout_marginBottom="20dp" android:layout_marginTop="10dp"/>
@@ -54,7 +54,7 @@
         android:id="@+id/distance_course_between_airports_button"
         android:layout_width="fill_parent"
         android:layout_height="60dp"
-        android:textSize="20dp" 
+        android:textSize="17dp" 
         android:text="@string/distance_course_between_airports_string" 
         android:onClick="distanceCourse"
         android:layout_marginBottom="20dp"/>

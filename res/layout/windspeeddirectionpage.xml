@@ -21,7 +21,7 @@
             <Spinner
                 android:id="@+id/windspeeddirectionGroundSpeedSpinner"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content" android:prompt="@string/speedUnits"/>
 
             <EditText
                 android:id="@+id/windspeeddirectionGroundSpeedInput"
@@ -50,7 +50,7 @@
             <Spinner
                 android:id="@+id/windspeeddirectionTrueSpeedSpinner"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content" android:prompt="@string/speedUnits"/>
 
             <EditText
                 android:id="@+id/windspeeddirectionTrueSpeedInput"
@@ -138,7 +138,7 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:text="@string/zero" >
+                android:clickable="false" android:cursorVisible="false" android:focusable="false" android:focusableInTouchMode="false">
 
                 <requestFocus />
             </EditText>
@@ -160,8 +160,7 @@
                 android:id="@+id/windspeeddirectionWindDirectionOutput"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:text="@string/zero" >
+                android:inputType="numberDecimal" android:focusableInTouchMode="false" android:focusable="false" android:clickable="false" android:cursorVisible="false">
 
                 <requestFocus />
             </EditText>

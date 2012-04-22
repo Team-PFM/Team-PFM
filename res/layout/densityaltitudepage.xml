@@ -21,7 +21,7 @@
                 android:id="@+id/densityaltitudePressureAltitudeInput"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
-                android:text="@string/densityaltitudepagePressureAltitudeInput" >
+                android:text="@string/zero" >
 
                 <requestFocus />
             </EditText>
@@ -44,7 +44,7 @@
                 android:id="@+id/densityaltitudeOutsideAirTempInput"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
-                android:text="@string/densityaltitudepageOutsideAirTempInput" >
+                android:text="@string/zero" >
 
                 <requestFocus />
             </EditText>
@@ -73,8 +73,7 @@
             <EditText
                 android:id="@+id/densityaltitudeDensityAltitudeOutput"
                 android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:text="@string/densityaltitudepageDensityAltitudeOutput" >
+                android:layout_height="match_parent" android:clickable="false" android:cursorVisible="false" android:focusable="false" android:focusableInTouchMode="false">
 
                 <requestFocus />
             </EditText>
