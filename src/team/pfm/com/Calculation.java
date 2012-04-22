@@ -110,10 +110,10 @@ public class Calculation {
 	
 	//calculates flying distance between the two airports that are given through ID's
 	//values from database class methods must be in radians as this is what is used here
-	public static double calcFlyDis(String id1, String id2,FPCDatabase db){
+	public static double calcFlyDis(String id1, String id2){
 		double r = 6371; //this is KM which means the distance is returned in KM
-		double cord1[] = db.accsAir(id1);
-		double cord2[]= db.accsAir(id2);
+		double cord1[] = FPCDatabase.accsAir(id1);
+		double cord2[]= FPCDatabase.accsAir(id2);
 		double lat1 = Math.toRadians(cord1[0]);
 		double lat2 = Math.toRadians(cord2[0]);
 		double latD = lat2 -lat1;
@@ -126,9 +126,9 @@ public class Calculation {
 	
 	//calculates initial course between two airports given through airport ID's
 	//values from database class methods must be in radians as this is what is used here
-	public static double calcCourBwAir(String id1, String id2,FPCDatabase db){
-		double cord1[] = db.accsAir(id1);
-		double cord2[]= db.accsAir(id2);
+	public static double calcCourBwAir(String id1, String id2){
+		double cord1[] = FPCDatabase.accsAir(id1);
+		double cord2[]= FPCDatabase.accsAir(id2);
 		double lat1= Math.toRadians(cord1[0]);
 		double lat2 = Math.toRadians(cord2[0]);
 		double longD =Math.toRadians(cord2[1] - cord1[1]); //longD is the difference of longitude 2 - longitude 1

@@ -80,6 +80,10 @@
     </string-array>
     <string name="speedUnits">Speed Units</string>
     <string name="zero">0</string>
+    <string name="delete">Delete</string>
+    <string name="welcomeText">Please select if you want to use the default airport list or your own:</string>
+    <string name="defaultAirportList">Default Airport List</string>
+    <string name="userList">Custom Airport List</string>
 	
 	
 </resources>

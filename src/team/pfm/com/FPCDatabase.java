@@ -12,26 +12,34 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.StringTokenizer;
+import android.content.Context;
+
+import android.content.res.AssetManager;
 
 
 public class FPCDatabase {
 	
 	 //variables
-	private ArrayList airID;
-	private ArrayList lat;
-	private ArrayList lon;
-	private File defaultList = new File("defaultAirports41.txt");
+	private static ArrayList airID;
+	private static ArrayList lat;
+	private static ArrayList lon;
+	//private static File defaultList = new File("defaultairports41.txt");
 	
+	//getter for list of airport IDs, this is needed to list the ids when choosing or deleting them in the interface
+	public static  ArrayList getAirID() {
+		return airID;
+	}
+
 	//methods
 	//constructor
 	//initialize default  arrays and populates them by reading in default text file
-	public FPCDatabase(){
-		airID = new ArrayList(30);
-		lat = new ArrayList(30);
-		lon = new ArrayList(30);
+	public static void initDefault(Scanner s){
+		airID = new ArrayList(3000);
+		lat = new ArrayList(3000);
+		lon = new ArrayList(3000);
 		int counter = 0;
 		try {
-			Scanner input = new Scanner(defaultList);
+			Scanner input = s;
 			while(input.hasNextLine()){
 				String a = input.nextLine();
 				StringTokenizer st = new StringTokenizer(a, ",");
@@ -44,15 +52,17 @@ public class FPCDatabase {
 				//System.out.println(id + "  " + lat1 + "  " + lat1); for tests
 				counter = counter + 1;
 			}
-		} catch (FileNotFoundException e) {
+		} catch (Exception e) {
 			System.out.println("defaultAirports41.txt file could not be found");
 			e.printStackTrace();
 		}
 	}
 	
 	//initialize custom method creates arrays and populates them by reading in default text file, you pass the whole name of the file ex: "name.txt"
-	public  void initAirCustom(String file){
-		this.ClearDB();//fisrt gets rid of the values in the database before loading it with the new file
+	public static void initAirCustom(String file){
+		airID = new ArrayList(3000);
+		lat = new ArrayList(3000);
+		lon = new ArrayList(3000);
 		int counter = 0;
 		try {
 			Scanner input = new Scanner(new File (file));
@@ -65,6 +75,7 @@ public class FPCDatabase {
 				airID.add(counter,id);
 				lat.add(counter, lat1);
 				lon.add(counter,lon1);
+				System.out.println(counter);
 				//System.out.println(id + "  " + lat1 + "  " + lat1); for tests
 				counter = counter + 1;
 			}
@@ -115,7 +126,7 @@ public class FPCDatabase {
 	
 	
 	//method adds new airport ID's and info added by the user
-	public  void addAir(String id, double latitiude, double longitude){
+	public static  void addAir(String id, double latitiude, double longitude){
 		boolean idInUse = false;
 		int idLoc =0;
 		//this first checks to see if the id is already in use or not
@@ -137,7 +148,7 @@ public class FPCDatabase {
 		}
 	}
 	//method deletes airport ID and info from "database"
-	public void delAir(String id){
+	public static void delAir(String id){
 		int idToDelete= 0; //making this 0 is okay initially bc the removal of the data will not occur unless idFound is set to true
 		boolean idFound = false;
 		//finding the tuple id for the ID to delete
@@ -156,7 +167,7 @@ public class FPCDatabase {
 	}
 	
 	//method to access airport lat and long coordinates, if there is no airport for the ID, it returns "1000000" for cord(kind of like an error code)
-	public  double[] accsAir(String id){
+	public static  double[] accsAir(String id){
 		double []cord = new double[2];
 		int idToAccs= 0;//making this 0 is okay initially bc the access of the data will not occur unless idFound is set to true
 		double latitude, longitude;
@@ -175,18 +186,31 @@ public class FPCDatabase {
 			cord[0]= latitude;
 			cord[1]= longitude;
 		}
-		else {
-			cord[0] = 1000000;
-		}
+		
 		return cord;//returns the array of lat in first spot and long in second spot
 	}
 
 	//method to clear the database in preparation for custom db list
-	public void ClearDB(){
-		airID.clear();
-		lat.clear();
-		lon.clear();
+	public static void ClearDB(){
+		if(!airID.isEmpty())
+			airID.clear();
+		if(!lat.isEmpty())
+			lat.clear();
+		if(!lon.isEmpty())
+			lon.clear();
 	}
+	
+	//method to check the database first before accessing it
+		public static void CheckDB(String id){
+			boolean status;
+			if(airID.contains(id)){
+				status = true;
+			}
+			else{
+				status = false;
+			}
+			
+		}
 	
 
 }

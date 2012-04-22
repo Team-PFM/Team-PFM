@@ -24,6 +24,21 @@
         <activity android:name="SettingsActivity" android:screenOrientation="portrait"></activity>
         <activity android:name="calculationsActivity" android:screenOrientation="portrait"></activity>
         <activity android:name="headingGsWcaActivity" android:screenOrientation="portrait"></activity>
-    </application>
+        <activity android:name="wSpeedAndDirectionActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="trueAirspeedActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="densityAltitudeActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="runwayWindsActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="distanceCourseActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="documentsActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="popupActivity" android:screenOrientation = "portrait">
+        	<intent-filter>
+         		<action android:name="android.intent.action.VIEW" />
+         		<category android:name="android.intent.category.DEFAULT" />
+         		<data android:mimeType="text/plain" />  
+     		</intent-filter>
+        </activity>
+		<activity android:name="AddDBActivity" android:screenOrientation="portrait"></activity>
+		<activity android:name="DeleteDBActivity" android:screenOrientation="portrait"></activity>
+</application>
 
 </manifest>
