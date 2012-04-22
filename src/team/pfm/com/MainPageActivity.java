@@ -55,4 +55,9 @@ public class MainPageActivity extends Activity {
     	Intent intent = new Intent(view.getContext(), documentsActivity.class);
     	startActivity(intent);
     }
+    
+    public void conversions(View view) {
+    	Intent intent = new Intent(view.getContext(), conversionActivity.class);
+    	startActivity(intent);
+    }
 }

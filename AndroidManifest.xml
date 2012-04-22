@@ -39,6 +39,8 @@
         </activity>
 		<activity android:name="AddDBActivity" android:screenOrientation="portrait"></activity>
 		<activity android:name="DeleteDBActivity" android:screenOrientation="portrait"></activity>
+		<activity android:name="aboutActivity" android:screenOrientation="portrait"></activity>
+		<activity android:name="conversionActivity" android:screenOrientation="portrait"></activity>
 </application>
 
 </manifest>
