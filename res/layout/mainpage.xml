@@ -20,7 +20,7 @@
         android:text="@string/mainpageConversion"
 		android:textStyle="bold"
 		android:textSize="25dp"
-android:layout_gravity="center" android:layout_margin="15dp"/>
+android:layout_gravity="center" android:layout_margin="15dp" android:onClick="conversions"/>
     <Button
         android:id="@+id/mainPageCalculations"
         android:layout_width="fill_parent"
@@ -48,6 +48,6 @@ android:layout_gravity="center" android:layout_margin="15dp"/>
         android:layout_margin="15dp"
         android:text="@string/mainpageDocuments"
         android:textSize="25dp"
-        android:textStyle="bold" />
+        android:textStyle="bold" android:onClick="documents"/>
 
 </LinearLayout>
