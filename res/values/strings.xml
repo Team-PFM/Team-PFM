@@ -72,12 +72,12 @@
     <string name="ground_speed_string">Ground Speed</string>
     <string name="wind_correction_angle_string">Wind Corr. Angle</string>
     <string name="indicated_airspeed_string">Indicated Airspeed</string>
-    <string name="mean_sea_level_altitude_string">Mean Sea Level Altitude</string>
     <string-array name="speedValues">
         <item>MPH</item>
         <item>Knots</item>
         <item>KPH</item>
-    </string-array>
+    </string-array><string name="mean_sea_level_altitude_string">Mean Sea Level Altitude</string>
+    
     <string name="speedUnits">Speed Units</string>
     <string name="zero">0</string>
     <string name="delete">Delete</string>
@@ -89,6 +89,29 @@
         <item>KM</item>
         <item>NM</item>
     </string-array>
+    <string-array name="conversionvalues">
+        <item >Speed</item>
+        <item >Distance</item>
+        <item >Temperature</item>
+        <item >Pressure</item>
+        <item >Angle</item>
+    </string-array>
+    <string-array name="tempvalues">
+        <item >Cel</item>
+        <item >Fah</item>
+        <item >Rank</item>
+        <item >Kev</item>
+    </string-array>
+    <string-array name="pressurevalues">
+        <item >Mercury</item>
+        <item >Millibars</item>
+    </string-array>
+    <string-array name="angelsvalues">
+        <item >Rad</item>
+        <item >DMS</item>
+    </string-array>
+    <string name="InputUnit">Input Unit</string>
+    <string name="OutputUnit">Output Unit</string>
 	
 	
 </resources>

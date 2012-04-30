@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
 
     
@@ -17,7 +17,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/conversionspageSpinnerText"
                 android:textSize="16dp"
-                android:textStyle="bold" android:layout_margin="15dp"/>
+                android:textStyle="bold" android:layout_margin="15dp" />
         </TableRow>
     
        <TableRow
@@ -37,47 +37,119 @@
        <TableRow
             android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_marginBottom="15dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
            
-           <EditText
-           android:id="@+id/conversionspageInput"
-           android:layout_width="120dp"
-           android:layout_height="wrap_content" android:inputType="numberSigned|numberDecimal">
-
-           <requestFocus />
-       	   </EditText>
-       	   
+           <TextView
+                android:id="@+id/conversions_input_unit"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/InputUnit"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                />
+       
              <Spinner
            android:id="@+id/conversionsInputUnitSpinner"
            android:layout_width="200dp"
            android:layout_height="wrap_content" android:layout_gravity="right"/>
        
         </TableRow>
+        
+       <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="1dp" android:layout_marginBottom="15dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+           
+                 
+            <EditText
+                android:id="@+id/conversions_input_main"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:text="@string/zero">
+
+                <requestFocus />
+            </EditText>
+            
+            <EditText
+                android:id="@+id/conversions_input_minutes"
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:inputType="numberDecimal" android:text="@string/zero" android:visibility="visible">
+
+                <requestFocus />
+            </EditText>
+            
+            <EditText
+                android:id="@+id/conversions_input_seconds"
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:inputType="numberDecimal"
+                android:text="@string/zero" android:visibility="visible">
+
+                <requestFocus />
+            </EditText>
+       
+        </TableRow>
 
          <TableRow
-            android:id="@+id/tableRow4"
+            android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_marginBottom="15dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
            
-           <EditText
-           android:id="@+id/conversionspageOutput"
-           android:layout_width="120dp"
-           android:layout_height="wrap_content" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:cursorVisible="false">
-
-           <requestFocus />
-       	   </EditText>
-       	   
+           <TextView
+                android:id="@+id/conversions_input_unit"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/OutputUnit"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                />
+       
              <Spinner
            android:id="@+id/conversionsOutputUnitSpinner"
            android:layout_width="200dp"
            android:layout_height="wrap_content" android:layout_gravity="right"/>
        
         </TableRow>
+        
+         <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="1dp" android:layout_marginBottom="10dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+           
+                 
+            <EditText
+                android:id="@+id/conversions_output"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:text="@string/zero" android:clickable="false" android:cursorVisible="false" android:focusable="false" android:focusableInTouchMode="false">
+
+                <requestFocus />
+            </EditText>
+            
+       
+        </TableRow>
 
          <Button
              android:id="@+id/conversionspageCalculate"
+             android:text="@string/conversionspageCalculate"
              android:layout_width="fill_parent"
-             android:layout_height="wrap_content"
-             android:text="@string/conversionspageCalculate" android:layout_margin="15dp" android:textStyle="bold" android:textSize="25dp"/>
+             android:layout_height="40dp"
+             android:layout_margin="20dp"
+             android:textStyle="bold"
+             android:textSize="25dp"
+			 android:onClick="conversion"/>
 
 </LinearLayout>
