@@ -3,7 +3,7 @@ package team.pfm.com;
 public class Temp {
 	//conversion class for temperature.
 	public double celToFah(double tem){
-		double fah = (5/9)*(tem - 32);
+		double fah = (tem - 32)* 0.555555556;
 		return fah;
 	}
 	public double celToKev(double tem){
@@ -39,7 +39,7 @@ public class Temp {
 		return cel;
 	}
 	public double kevToFah(double tem){
-		double fah = (5/9)*(tem - 305.15);
+		double fah = (tem - 305.15) * 0.555555556;
 		return fah;
 	}
 	public double kevToRan(double tem){
