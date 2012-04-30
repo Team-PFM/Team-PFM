@@ -13,7 +13,7 @@ public class Checks {
 	}
 	//checks to see if radian is a valid input
 	public boolean isRadValid(double rad){
-		if (rad >= 0 && rad<=(Math.PI*2)){
+		if (rad >= 0 && rad<=(6.283186)){
 			return true;
 		}else{
 			return false;
@@ -39,7 +39,7 @@ public class Checks {
 	}
 	//checks to see if the temp is valid
 	public boolean isTempValid(double temp){
-		if (temp >= -50 && temp<150){
+		if (temp >= (-50)){
 			return true;
 		}else{
 			return false;

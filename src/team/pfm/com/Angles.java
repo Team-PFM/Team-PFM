@@ -4,12 +4,15 @@ public class Angles {
 	//converts degree minute second to radians by first converting dms to decimal form
 	public double dmsToRad(double deg, double min, double sec){
 		double dec = dmsToDecDms(deg,min,sec);
-		double rad = dec*2*Math.PI;
+		double rad = dec*(Math.PI/180);
 		return rad;
 	}
 	//degree minute second to degree minute second
-	public double dmsToDms(double ang){
-		double dms = ang;
+	public int[] dmsToDms(int ang, int min, int second){
+		int[] dms = new int[3];
+		dms[0] = ang;
+		dms[1] = min;
+		dms[2] = second;
 		return dms;
 	}
 	// radian to radian
@@ -24,22 +27,24 @@ public class Angles {
 	}
 	//converts decimal form to degree minute second and returns an array with 
 	//degree being the first minute second and second third in the array
-	public double[] decDmsToDms(double ang){
-		double[] dms;
-		dms = new double[2];
-		double degreer = (double) (ang%1);
-		double mdouble = ang - degreer;
-		double minr = (double) (mdouble%.1);
-		double sect = ang - degreer - minr;
-		dms[0] = (double) (ang/1);
-		dms[1] = (double) ((mdouble/.1)*6);
-		dms[2] = (double) ((sect/.01)*.6);
+	public int[] decDmsToDms(double ang){
+		int[] dms;
+		dms = new int[3];
+		double degr = ang%1;
+		double min = degr*60;
+		double minr = min%1;
+		double sec = minr * 60;
+		double secr = sec%1;
+		dms[0] = (int) (ang - degr);
+		dms[1] = (int) (min - minr);
+		dms[2] = (int) (sec - secr);
 		return dms;
 		}
 	//
-	public double radToDms(double ang){
-		double decdms = ang/(2*Math.PI);
-		decDmsToDms(decdms);
-		return 0;
+	public int[] radToDms(double ang){
+		double decdms = ang*(180/Math.PI);
+		int[] dms = new int[3];
+		dms = decDmsToDms(decdms);	
+		return dms;
 	}
 }
